@@ -1,0 +1,197 @@
+/* general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section-break-pic {
+    text-align: center;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.section-break-pic img {
+    width: 150px;
+}
+
+/* wrapper */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ************* header ****************** */
+header {
+    display: flex;
+    flex-direction: column;
+}
+/* top contacts */
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid lightgrey;
+    color: grey;
+}
+
+.phone-email {
+    display: flex;
+}
+
+.phone-email p {
+margin-right: 30px;
+}
+
+.social-icons i {
+    margin: 0 5px;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+    align-items: center;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 100px;
+}
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links li {
+    margin:  0 10px;
+}
+
+/* header-title */
+.header-title {
+    text-align: center;
+    background: rgb(249, 246, 246);
+    padding: 20px 0;
+}
+
+.header-title p {
+    color: grey;
+    margin: 10px 0;
+}
+
+/* ***************** body content ******************* */
+/* best sellers */
+.best-sellers {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.best-sellers h2 {
+    margin: 20px 0;
+}
+
+.slider-products {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.slider-item {
+    width: 250px;
+    height: 90%;
+    height: 300px;
+    margin: 0 10px;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* categories */
+.categories {
+    display: flex;
+    width: 80%;
+    align-self: center;
+}
+
+.categories h4, .categories h5 {
+    margin: 10px 0;
+}
+
+.col {
+    width: 50%;
+    height: 100vh;
+    margin: 0 20px;
+}
+
+/* col-1 styling */
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    height: 40%;
+    width: 100%;
+}
+
+.row-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-2 section {
+    width: 40%;
+}
+
+.row-2 section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* col-2 styling */
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.col-2 .handbags {
+    width: 100%;
+    height: 45%;
+}
+
+.col-2 .watches {
+    width: 100%;
+    height: 45%;
+}
