@@ -52,7 +52,7 @@ header {
 margin-right: 30px;
 }
 
-.social-icons i {
+.contacts i {
     margin: 0 5px;
 }
 
@@ -94,12 +94,12 @@ nav .logo img {
 
 /* ***************** body content ******************* */
 /* best sellers */
-.best-sellers {
+.slider {
     text-align: center;
     margin: 20px 0;
 }
 
-.best-sellers h2 {
+.slider h2 {
     margin: 20px 0;
 }
 
@@ -128,6 +128,7 @@ nav .logo img {
     display: flex;
     width: 80%;
     align-self: center;
+    margin-bottom: 20px;
 }
 
 .categories h4, .categories h5 {
@@ -194,4 +195,63 @@ nav .logo img {
 .col-2 .watches {
     width: 100%;
     height: 45%;
+}
+
+/* handbags slider */
+.other-sliders:nth-child(odd) {
+    background: lightgoldenrodyellow;
+}
+
+.other-sliders:nth-child(odd) .slider-item {
+    width: 150px;
+}
+/* .slider-handbags {
+    background: lightgoldenrodyellow;
+}
+
+.slider-handbags .slider-item {
+    width: 150px;
+} */
+
+.page-redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    background: darkslategray;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+}
+
+footer .links {
+    display: flex;
+    flex-direction: column;
+} 
+
+footer i {
+    margin: 5px 0;
+}
+
+.footer-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form textarea {
+    resize: none;
+    height: 70px;
 }
