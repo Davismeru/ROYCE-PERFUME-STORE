@@ -24,6 +24,13 @@ a {
     width: 150px;
 }
 
+/* toggle between the wrapper and the products container */
+.not-active {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
 /* wrapper */
 .wrapper {
     display: flex;
@@ -254,4 +261,40 @@ form {
 form textarea {
     resize: none;
     height: 70px;
+}
+
+/* ****************************** other products page ********************************* */
+/* page banner */
+.banner-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    /* background: url(../img/bracelets/banner-img.jpg) center; */
+    background-size: cover;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* banner header dark overlay */
+.banner-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: -2;
+}
+
+/* items in the products container */
+.products-container  .best-sellers .slider-item {
+    width: 250px;
+}
+
+.products-container  .slider-item {
+    width: 150px;
 }
