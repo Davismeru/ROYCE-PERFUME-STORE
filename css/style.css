@@ -271,8 +271,6 @@ form textarea {
     align-items: center;
     justify-content: center;
     height: 70vh;
-    /* background: url(../img/bracelets/banner-img.jpg) center; */
-    background-size: cover;
     color: white;
     position: relative;
     z-index: 2;

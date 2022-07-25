@@ -157,6 +157,21 @@ function loadNewPage(whichProduct) {
                     <div class="slider-item">
                         <img src="img/${whichProduct}/item-6.jpg" alt="">
                     </div>
+
+                    <!-- individual item in the best seller section -->
+                    <div class="slider-item">
+                        <img src="img/${whichProduct}/item-7.jpg" alt="">
+                    </div>
+
+                    <!-- individual item in the best seller section -->
+                    <div class="slider-item">
+                        <img src="img/${whichProduct}/item-8.jpg" alt="">
+                    </div>
+
+                    <!-- individual item in the best seller section -->
+                    <div class="slider-item">
+                        <img src="img/${whichProduct}/item-9.jpg" alt="">
+                    </div>
                 </div>
             </div>`
 }
@@ -173,9 +188,9 @@ navLinks.forEach((link)=> {
         productsContainer.classList.remove('not-active')
         productsContainer.innerHTML = loadNewPage(selectedProduct)
 
-
+        // display different banner header background depending on content displayed
         const bannerHeader = document.querySelector('.banner-header')
-        bannerHeader.style.background = `url(img/bracelets/banner-img.jpg) center`
+        bannerHeader.style.background = `url(img/${selectedProduct}/banner-img.jpg) center`
         bannerHeader.style.backgroundSize = "cover"
     })
 })
