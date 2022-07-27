@@ -69,7 +69,17 @@ nav {
     justify-content: space-between;
     border-bottom: 1px solid lightgrey;
     align-items: center;
+    z-index: 3;
 }
+
+/* fixed nav */
+.fixed-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #fff;
+}
+
 nav .logo {
     display: flex;
     align-items: center;
@@ -133,13 +143,23 @@ nav .logo img {
 /* categories */
 .categories {
     display: flex;
-    width: 80%;
+    width: 60%;
     align-self: center;
     margin-bottom: 20px;
 }
 
 .categories h4, .categories h5 {
     margin: 10px 0;
+}
+
+/* hover effect on categories section */
+.categories .hover {
+    position: relative;
+}
+
+.categories .hover:hover {
+    cursor: pointer;
+    color: grey;
 }
 
 .col {
@@ -172,7 +192,7 @@ nav .logo img {
 }
 
 .row-2 section {
-    width: 40%;
+    width: 48%;
 }
 
 .row-2 section img{

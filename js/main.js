@@ -53,6 +53,7 @@ productCategories.map((product) => {
     `
 })
 
+// load new page function
 function loadNewPage(whichProduct) {
    return `<header>
     <!-- top contacts section -->
@@ -126,7 +127,7 @@ function loadNewPage(whichProduct) {
 </div>
 
 <div class="slider slider-${whichProduct}">
-                <h2>${whichProduct}</h2>
+                <h2>All ${whichProduct}</h2>
                 <div class="slider-products">
                     <!-- individual item in the best seller section -->
                     <div class="slider-item">
@@ -178,14 +179,16 @@ function loadNewPage(whichProduct) {
 
 const  wrapper = document.querySelector('.wrapper')
 const productsContainer = document.querySelector('.products-container')
-const nav = document.querySelector('nav')
-const navLinks = nav.querySelectorAll('a')
+const navLinksContainer = document.querySelector('.nav-links')
+const homeBtn = document.querySelector('.fa-home')
+const navLinks = navLinksContainer.querySelectorAll('a')
 navLinks.forEach((link)=> {
     link.addEventListener('click', (e)=> {
         e.preventDefault()
         const selectedProduct = e.currentTarget.innerText
         wrapper.classList.add('not-active')
         productsContainer.classList.remove('not-active')
+        homeBtn.classList.remove('not-active')
         productsContainer.innerHTML = loadNewPage(selectedProduct)
 
         // display different banner header background depending on content displayed
@@ -195,3 +198,29 @@ navLinks.forEach((link)=> {
     })
 })
 
+// fixed nav
+const nav = document.querySelector('nav')
+const navHeight = nav.clientHeight
+window.addEventListener('scroll', ()=> {
+    scrollY > navHeight ? nav.classList.add('fixed-nav') : nav.classList.remove('fixed-nav')
+})
+
+// categories to redirect to new page on click
+const categoriesSection = document.querySelector('.categories')
+const categoryRefs = categoriesSection.querySelectorAll('.cat-title')
+categoryRefs.forEach(ref => {
+    const parent = ref.parentElement
+    parent.addEventListener('click', (e)=> {
+        const selectedParent = e.currentTarget.getAttribute('id')
+        wrapper.classList.add('not-active')
+        productsContainer.classList.remove('not-active')
+        homeBtn.classList.remove('not-active')
+        productsContainer.innerHTML = loadNewPage(selectedParent)
+
+        // display different banner header background depending on content displayed
+        const bannerHeader = document.querySelector('.banner-header')
+        bannerHeader.style.background = `url(img/${selectedParent}/banner-img.jpg) center`
+        bannerHeader.style.backgroundSize = "cover"
+        
+    })
+})
