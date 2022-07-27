@@ -41,8 +41,7 @@ productCategories.map((product) => {
 
                 <!-- redirect to ${product} page -->
                 <div class="page-redirect redirect_to_${product}">
-                    <a href="#">Click to see more ${product}</a>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <a href="#" id="${product}">see all ${product}</a>
                 </div>
             </div>
 
@@ -223,4 +222,25 @@ categoryRefs.forEach(ref => {
         bannerHeader.style.backgroundSize = "cover"
         
     })
+})
+
+// rediect links functionality
+const pageRedirectContainers = document.querySelectorAll('.page-redirect')
+pageRedirectContainers.forEach(container => {
+    const redirectlink = container.querySelector('a')
+    redirectlink.addEventListener('click', (e) => {
+        e.preventDefault()
+        const linkId = redirectlink.getAttribute('id')
+        wrapper.classList.add('not-active')
+        productsContainer.classList.remove('not-active')
+        homeBtn.classList.remove('not-active')
+        productsContainer.innerHTML = loadNewPage(linkId)
+
+        // display different banner header background depending on content displayed
+        const bannerHeader = document.querySelector('.banner-header')
+        bannerHeader.style.background = `url(img/${linkId}/banner-img.jpg) center`
+        bannerHeader.style.backgroundSize = "cover"
+        
+    })
+    
 })
