@@ -1,3 +1,33 @@
+// responsive navbar
+const menubars =document.querySelectorAll('.menubar')
+const responsiveNav = document.querySelector('.responsive-nav')
+menubars.forEach(menubar => {
+    menubar.addEventListener('click', ()=> {
+        responsiveNav.classList.toggle('show-responsive-nav')
+    })
+})
+
+const responsiveLinks = document.querySelectorAll('.responsive-links a')
+responsiveLinks.forEach(link => {
+    link.addEventListener('click', (e)=> {
+        e.preventDefault
+        responsiveNav.classList.remove('show-responsive-nav')
+        const clickedLink = e.currentTarget.innerText;
+        wrapper.classList.add('not-active')
+        productsContainer.classList.remove('not-active')
+        homeBtn.classList.remove('not-active')
+        productsContainer.innerHTML = loadNewPage(clickedLink)
+
+        // display different banner header background depending on content displayed
+        const bannerHeader = document.querySelector('.banner-header')
+        bannerHeader.style.background = `url(img/${clickedLink}/banner-img.jpg) center`
+        bannerHeader.style.backgroundSize = "cover"
+    })
+})
+
+
+
+
 // render items in homepage
 // display different categories in slides
 const productCategories = ["handbags", "watches", "bracelets", "shades", "perfumes"]
@@ -56,17 +86,18 @@ productCategories.map((product) => {
 function loadNewPage(whichProduct) {
    return `<header>
     <!-- top contacts section -->
-    <div class="contacts">
+    <div class="contacts main-contacts">
         <div class="phone-email">
             <i class="fa-solid fa-phone"></i></i> : <span>+254746671803</span></p>
             <i class="fa-solid fa-envelope"></i></i><span> : davismeru911@gmail.com</span>
         </div>
 
         <div class="social-icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/Davismeru/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </div>
 
@@ -169,7 +200,30 @@ function loadNewPage(whichProduct) {
                         <img src="img/${whichProduct}/item-9.jpg" alt="">
                     </div>
                 </div>
-            </div>`
+            </div>
+            
+            <!-- footer content -->
+                <footer>
+                    <div class="footer-contacts">
+                        <section>
+                            <h4>Developer profile</h4>
+                            <div class="links">
+                                <a href="#"><i class="fa-brands fa-github"></i>Davismeru</a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i>Davis Meru</a>
+                                <a href="#"><i class="fa-solid fa-envelope"></i>Davismeru911@gmail.com</a>
+                            </div>
+                        </section>
+                        <section class="form">
+                            <h4>Leave a comment</h4>
+                            <form action="mailto:davismeru911@gmail.com" ,e]>
+                                <input type="text" placeholder="enter your email">
+                                <textarea name="comment" placeholder="leave a comment"></textarea>
+                                <input type="submit" value="submit" class="submit">
+                            </form>
+                        </section>
+                    </div>
+                    <p>all rights reserved @2022</p>
+                </footer>`
 }
 
 const  wrapper = document.querySelector('.wrapper')

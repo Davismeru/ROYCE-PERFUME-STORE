@@ -32,42 +32,6 @@ a {
     overflow: hidden;
 }
 
-/* wrapper */
-.wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-/* ************* header ****************** */
-header {
-    display: flex;
-    flex-direction: column;
-}
-/* top contacts */
-.contacts {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid lightgrey;
-    color: grey;
-}
-
-.phone-email {
-    display: flex;
-}
-
-.phone-email p {
-margin-right: 30px;
-}
-
-.contacts i {
-    margin: 0 5px;
-}
-
-.contacts a {
-    color: grey;
-}
-
 /* navbar */
 nav {
     display: flex;
@@ -95,7 +59,7 @@ nav .logo img {
     width: 100px;
 }
 
-.nav-links ul {
+.main-links ul {
     display: flex;
 }
 
@@ -107,6 +71,124 @@ nav .logo img {
     display: none;
 }
 
+/* responsive nav */
+.responsive-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #444;
+    z-index: 5;
+    display: none;
+}
+
+/* toggle this classs when menubar is clicked */
+.show-responsive-nav {
+    display: block;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.nav-header .logo {
+    width: 100%;
+    color: grey;
+}
+
+.nav-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header i {
+    color: grey;
+}
+
+.nav-header .logo img {
+    width: 100px;
+}
+
+.responsive-links {
+    padding: 0 20px;
+    margin-top: 50px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.responsive-links li {
+    margin: 20px 0;
+}
+
+.responsive-links a {
+    color: grey;
+    font-size: 20px;
+}
+
+.responsive-contacts {
+    flex-direction: column;
+    border: none;
+    margin: 20px;
+}
+
+.responsive-contacts .phone-email {
+    margin-right: 0;
+    flex-direction: column;
+}
+
+.responsive-contacts p {
+    margin: 15px 0;
+    color: grey;
+}
+
+.responsive-contacts .social-icons a {
+    color: #fefefe;
+    margin: 3px;
+}
+
+/* wrapper */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ************* header ****************** */
+header {
+    display: flex;
+    flex-direction: column;
+}
+/* top contacts */
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: grey;
+}
+
+.main-contacts {
+    border-bottom: 1px solid lightgrey;
+}
+
+.phone-email {
+    display: flex;
+}
+
+.phone-email p {
+margin-right: 30px;
+}
+
+.contacts i {
+    margin: 0 5px;
+}
+
+.contacts a {
+    color: grey;
+}
+
 /* header-title */
 .header-title {
     text-align: center;
@@ -114,7 +196,6 @@ nav .logo img {
     background-size: cover;
     position: relative;
     color: #fff;
-    margin: 10px 0;
     z-index: 4;
     height: 60vh;
     display: flex;
@@ -172,7 +253,7 @@ nav .logo img {
     height: 110vh;
     align-self: center;
     margin-bottom: 20px;
-    background: lightsalmon;
+    background: #a1724abf;
 }
 
 .categories h4, .categories h5 {
@@ -313,6 +394,10 @@ nav .logo img {
     width: 150px;
 }
 
+.products-container .best-sellers h2 span{
+    text-transform: uppercase;
+}
+
 /* footer */
 footer {
     display: flex;
@@ -322,6 +407,7 @@ footer {
     align-items: center;
     justify-content: space-around;
     height: 200px;
+    background: darkslategray;
 }
 
 footer .links {
@@ -370,6 +456,7 @@ form textarea {
     border: 1px solid grey;
     border-radius: 4px;
     cursor: pointer;
+    color: #fefefe;
 }
 
 /* back to top button */
@@ -410,20 +497,19 @@ form textarea {
 
 /* responsiveness */
 @media screen and (max-width:800px) {
+    .fa-home {
+        display: none;
+    }
+
     nav .logo img {
         width: 60px;
     }
 
     nav .logo h4 {
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    .fa-home {
-        position: absolute;
-        left: 50%;
-    }
-
-    .nav-links {
+    .main-links {
         display: none;
     }
 
@@ -473,10 +559,6 @@ form textarea {
 }
 
 @media screen and (max-width:550px) {
-    .fa-home {
-        left: 55%;
-    }
-
     .slider-item {
         width: 300px;
     }
