@@ -18,7 +18,7 @@ a {
 .section-break-pic {
     text-align: center;
     width: 100%;
-    margin: 40px 0;
+    margin: 10px 0;
 }
 
 .section-break-pic img {
@@ -64,6 +64,10 @@ margin-right: 30px;
     margin: 0 5px;
 }
 
+.contacts a {
+    color: grey;
+}
+
 /* navbar */
 nav {
     display: flex;
@@ -71,6 +75,7 @@ nav {
     border-bottom: 1px solid lightgrey;
     align-items: center;
     z-index: 3;
+    position: relative;
 }
 
 /* fixed nav */
@@ -98,16 +103,36 @@ nav .logo img {
     margin:  0 10px;
 }
 
+.menubar {
+    display: none;
+}
+
 /* header-title */
 .header-title {
     text-align: center;
-    background: rgb(249, 246, 246);
-    padding: 20px 0;
+    background: url(../img/general/banner.jpg) center center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    margin: 10px 0;
+    z-index: 4;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.header-title p {
-    color: grey;
-    margin: 10px 0;
+/* dark overlay over the header title */
+.header-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -4;
 }
 
 /* ***************** body content ******************* */
@@ -130,7 +155,6 @@ nav .logo img {
 
 .slider-item {
     width: 250px;
-    height: 90%;
     height: 300px;
     margin: 0 10px;
 }
@@ -369,6 +393,7 @@ form textarea {
     display: flex;
 }
 
+/* top btn animation */
 @keyframes bounce {
     0% {
         transform: scale(1);
@@ -380,5 +405,89 @@ form textarea {
 
     100% {
         transform: scale(1);
+    }
+}
+
+/* responsiveness */
+@media screen and (max-width:800px) {
+    nav .logo img {
+        width: 60px;
+    }
+
+    nav .logo h4 {
+        font-size: 14px;
+    }
+
+    .fa-home {
+        position: absolute;
+        left: 50%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menubar {
+        display: inline;
+        font-size: 20px;
+        color: grey;
+        margin: 0 20px;
+    }
+
+    .contacts  {
+        display: none;
+    }
+
+    .categories {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        height: 1000px;
+    }
+
+    .col {
+        width: 100%;
+        height: 400px;
+    }
+
+    .col-2 .handbags, .col-2 .watches {
+        height: 200px;
+        margin: 40px 0;
+    }
+
+    footer {
+        height: auto;
+        padding: 25px;
+    }
+
+    .footer-contacts {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form {
+        margin: 20px 0;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .fa-home {
+        left: 55%;
+    }
+
+    .slider-item {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    footer {
+        font-size: 12px;
+    }
+
+    .form {
+        width: 70%;
     }
 }

@@ -75,14 +75,10 @@ function loadNewPage(whichProduct) {
         <img src="img/general/section png 1.png" alt="">
     </div>
 
-    <!-- header-title -->
-    <div class="header-title">
-        <h1>ROYCE SCENTS</h1>
-    </div>
-
     <!-- page banner -->
     <div class="page-banner">
         <div class="banner-header">
+            <h1>ROYCE SCENTS</h1>
             <h2>${whichProduct}</h2>
         </div>
     </div>
