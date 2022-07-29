@@ -550,11 +550,10 @@ form textarea {
     .slider-item {
         height: 150px;
         margin: 5px;
-        background: brown;
     }
 
     .slider-item img {
-        width: 150px;
+        width: 250px;
         height: 100%;
     }
 
