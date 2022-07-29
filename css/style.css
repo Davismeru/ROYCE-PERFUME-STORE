@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -144,22 +145,30 @@ nav .logo img {
 .categories {
     display: flex;
     width: 60%;
+    height: 110vh;
     align-self: center;
     margin-bottom: 20px;
+    background: lightsalmon;
 }
 
 .categories h4, .categories h5 {
     margin: 10px 0;
 }
 
+.categories img {
+    border-radius: 10px;
+}
+
 /* hover effect on categories section */
 .categories .hover {
     position: relative;
+    transition: 0.2s;
 }
 
 .categories .hover:hover {
     cursor: pointer;
-    color: grey;
+    color: #fff;
+    transform: scale(0.9);
 }
 
 .col {
@@ -246,43 +255,6 @@ nav .logo img {
     align-items: center;
 }
 
-/* footer */
-footer {
-    display: flex;
-    flex-direction: column;
-    background: darkslategray;
-    color: #fff;
-    align-items: center;
-    justify-content: space-around;
-    height: 200px;
-}
-
-footer .links {
-    display: flex;
-    flex-direction: column;
-} 
-
-footer i {
-    margin: 5px 0;
-}
-
-.footer-contacts {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form textarea {
-    resize: none;
-    height: 70px;
-}
-
 /* ****************************** other products page ********************************* */
 /* page banner */
 .banner-header {
@@ -315,4 +287,98 @@ form textarea {
 
 .products-container  .slider-item {
     width: 150px;
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    background: darkslategray;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+}
+
+footer .links {
+    display: flex;
+    flex-direction: column;
+} 
+
+footer i {
+    margin: 5px;
+}
+
+footer a {
+    margin: 0 5px;
+    color: #fff;
+}
+
+.footer-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, textarea {
+    outline: none;
+    padding: 4px;
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+form textarea {
+    resize: none;
+    height: 70px;
+    font-size: 12px;
+}
+
+.submit {
+    background: none;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* back to top button */
+.top-btn {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    width: 30px;
+    height: 30px;
+    background: lightcoral;
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    z-index: 9999;
+    animation: bounce 0.5s infinite ease-in-out;
+}
+
+.show-top-btn {
+    display: flex;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

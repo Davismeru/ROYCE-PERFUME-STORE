@@ -202,6 +202,10 @@ const nav = document.querySelector('nav')
 const navHeight = nav.clientHeight
 window.addEventListener('scroll', ()=> {
     scrollY > navHeight ? nav.classList.add('fixed-nav') : nav.classList.remove('fixed-nav')
+
+    // back to top button
+    const topBtn = document.querySelector('.top-btn')
+    scrollY > 600 ? topBtn.classList.add('show-top-btn') : topBtn.classList.remove('show-top-btn');
 })
 
 // categories to redirect to new page on click
