@@ -548,14 +548,7 @@ form textarea {
     }
 
     .slider-item {
-        height: 150px;
-        margin: 5px;
-        background: brown;
-    }
-
-    .slider-item img {
-        width: 150px;
-        height: 100%;
+        height: 200px;
     }
 
     .col {
