@@ -231,7 +231,7 @@ const productsContainer = document.querySelector('.products-container')
 const navLinksContainer = document.querySelector('.nav-links')
 const homeBtn = document.querySelector('.fa-home')
 const navLinks = navLinksContainer.querySelectorAll('a')
-navLinks.forEach((link)=> {
+navLinks.forEach(link => {
     link.addEventListener('click', (e)=> {
         e.preventDefault()
         const selectedProduct = e.currentTarget.innerText
