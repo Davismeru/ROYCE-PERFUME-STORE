@@ -260,11 +260,25 @@ margin-right: 30px;
 /* categories */
 .categories {
     display: flex;
-    width: 60%;
-    height: 110vh;
     align-self: center;
     margin-bottom: 20px;
-    background: #a1724abf;
+    background: #cfccc926;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.categories section {
+    width: 30%;
+    height: 200px;
+    margin: 20px 10px;
+}
+
+.categories section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .categories h4, .categories h5 {
@@ -272,7 +286,7 @@ margin-right: 30px;
 }
 
 .categories img {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 /* hover effect on categories section */
@@ -287,71 +301,10 @@ margin-right: 30px;
     transform: scale(0.9);
 }
 
-.col {
-    width: 50%;
-    height: 100vh;
-    margin: 0 20px;
-}
-
-/* col-1 styling */
-.col-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.row {
-    height: 40%;
-    width: 100%;
-}
-
-.row-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.row-2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.row-2 section {
-    width: 48%;
-}
-
-.row-2 section img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* col-2 styling */
-.col-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.col-2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.col-2 .handbags {
-    width: 100%;
-    height: 45%;
-}
-
-.col-2 .watches {
-    width: 100%;
-    height: 45%;
-}
 
 /* handbags slider */
 .other-sliders:nth-child(odd) {
-    background: lightgoldenrodyellow;
+    background: #d3d3ca54;
 }
 
 .other-sliders:nth-child(odd) .slider-item {
@@ -541,24 +494,16 @@ form textarea {
 
     .categories {
         width: 100%;
-        flex-direction: column;
         align-items: center;
         padding: 0 20px;
-        height: 1000px;
+    }
+
+    .categories section {
+        height: 150px;
     }
 
     .slider-item {
         height: 200px;
-    }
-
-    .col {
-        width: 100%;
-        height: 400px;
-    }
-
-    .col-2 .handbags, .col-2 .watches {
-        height: 200px;
-        margin: 40px 0;
     }
 
     footer {
