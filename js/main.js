@@ -289,6 +289,7 @@ pageRedirectContainers.forEach(container => {
         productsContainer.classList.remove('not-active')
         homeBtn.classList.remove('not-active')
         productsContainer.innerHTML = loadNewPage(linkId)
+        scrollTo(0 , 0)
 
         // display different banner header background depending on content displayed
         const bannerHeader = document.querySelector('.banner-header')
